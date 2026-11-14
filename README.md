@@ -6,7 +6,7 @@
 [![Global AI Hackathon 2026](https://img.shields.io/badge/Global%20AI%20Hackathon-Problem%20Statement%2001-cyan.svg)](https://bifrost.maximhq.com)
 [![Bifrost Gateway](https://img.shields.io/badge/Bifrost%20Gateway-http%3A%2F%2Flocalhost%3A8080-blue.svg)](https://github.com/maximhq/bifrost)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
-[![Tests: 11 Passed](https://img.shields.io/badge/Tests-11%20Passed-brightgreen.svg)](tests/test_guards.py)
+[![Tests: 15 Passed](https://img.shields.io/badge/Tests-15%20Passed-brightgreen.svg)](tests/test_guards.py)
 
 > **Problem Statement 01:** *"Build a Coding Agent That Gets the Job Done on the Fewest Tokens"*  
 > All LLM requests are routed through **Maxim AI's Bifrost Gateway** at `http://localhost:8080/openai/v1`.
@@ -180,7 +180,9 @@ python leancode.py --budget 0.10 "Audit repository security"
 
 ## 🧪 Testing & Verification
 
-LeanCode includes an automated `pytest` suite in `tests/test_guards.py`:
+LeanCode includes an automated `pytest` suite of **15 tests** across `tests/test_guards.py` and `tests/test_server.py`:
+
+### Security, Budget & Cache Guardrails (`tests/test_guards.py`)
 - `test_confidential_repo_forces_local_only_routing_even_when_prompted_for_gpt4`: Asserts that adversarial prompts cannot override `.confidential` local model locking.
 - `test_confidential_repo_via_env_var`: Verifies environment variable enforcement.
 - `test_pre_call_budget_check_blocks_execution_before_overrun`: Verifies that pre-call token estimation halts cleanly before exceeding `USER_BUDGET_USD`.
@@ -192,6 +194,12 @@ LeanCode includes an automated `pytest` suite in `tests/test_guards.py`:
 - `test_action_approval_gate_blocks_run_shell_when_denied`: Confirms shell command execution is blocked.
 - `test_automatic_failover_on_provider_rate_limit`: Verifies seamless failover when primary model hits HTTP 429.
 - `test_bifrost_402_budget_exhaustion_halts_cleanly`: Confirms Bifrost Gateway HTTP 402 virtual key budget exhaustion is handled cleanly.
+
+### FastAPI & Live Demo Endpoints (`tests/test_server.py`)
+- `test_health_and_dashboard_endpoints`: Verifies health check and dashboard HTML routes.
+- `test_status_and_telemetry_endpoints`: Verifies gateway status, model candidate chain, and live telemetry payload.
+- `test_confidential_toggle_endpoint`: Verifies dynamic `.confidential` marker creation, deletion, and local Ollama routing lock.
+- `test_demo_seed_cache_and_simulate_failover`: Verifies judge one-click cache hit priming and simulated 429 provider failover.
 
 Run the test suite anytime:
 ```bash
@@ -211,7 +219,8 @@ leancode-bifrost/
 ├── leancode.py                # Core Agent Engine & Rich CLI Runner
 ├── server.py                  # FastAPI Backend (:8000) with Telemetry & Action Gate
 ├── tests/
-│   └── test_guards.py         # 11 Automated Pytest Guardrail & Unit Tests
+│   ├── test_guards.py         # 15 Automated Pytest Guardrail & Unit Tests
+│   └── test_server.py
 ├── frontend/                  # Next.js + Tailwind Control Dashboard (:3000)
 │   ├── package.json
 │   ├── tailwind.config.js
