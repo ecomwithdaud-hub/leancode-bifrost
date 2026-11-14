@@ -1,7 +1,7 @@
 # LeanCode ⚡
 **Built by Team [Zepra Tech](https://gozepra.tech/) — Global AI Hackathon 2026 (Problem Statement 01)**
 
-### Token-Minimizing Coding Agent Powered by Maxim AI's Bifrost Gateway
+### Token-Minimizing Coding Agent Powered by [Maxim AI's Bifrost Gateway](https://github.com/maximhq/bifrost)
 
 [![Global AI Hackathon 2026](https://img.shields.io/badge/Global%20AI%20Hackathon-Problem%20Statement%2001-cyan.svg)](https://bifrost.maximhq.com)
 [![Bifrost Gateway](https://img.shields.io/badge/Bifrost%20Gateway-http%3A%2F%2Flocalhost%3A8080-blue.svg)](https://github.com/maximhq/bifrost)
