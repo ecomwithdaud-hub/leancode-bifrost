@@ -1,4 +1,6 @@
 # LeanCode ⚡
+**Built by Team [Zepra Tech](https://gozepra.tech/) — Global AI Hackathon 2026 (Problem Statement 01)**
+
 ### Token-Minimizing Coding Agent Powered by Maxim AI's Bifrost Gateway
 
 [![Global AI Hackathon 2026](https://img.shields.io/badge/Global%20AI%20Hackathon-Problem%20Statement%2001-cyan.svg)](https://bifrost.maximhq.com)
@@ -234,3 +236,11 @@ leancode-bifrost/
 - **Problem Statement 01:** *"Build a Coding Agent That Gets the Job Done on the Fewest Tokens"*
 - **Gateway:** Maxim AI Bifrost (`http://localhost:8080/openai/v1`)
 - **Key Inventions:** SHA-256 Token Cache, Line-Range Slicing, Pre-Call Budget Halting, Physical OS Confidential Lock, Human Gate Approval.
+
+---
+
+## 👥 Team
+
+- **Muhammad Daud Ali Lashari** — Founder & Lead AI Architect, [Zepra Tech](https://gozepra.tech/) ([GitHub](https://github.com/ecomwithdaud-hub) · [LinkedIn](https://www.linkedin.com/company/zepra-tech-official))
+- **Team Member 02** — Full-Stack & Systems Engineer, [Zepra Tech](https://gozepra.tech/) ([GitHub](https://github.com/ecomwithdaud-hub) · [LinkedIn](https://www.linkedin.com/company/zepra-tech-official))
+- **Team Member 03** — AI Routing & QA Specialist, [Zepra Tech](https://gozepra.tech/) ([GitHub](https://github.com/ecomwithdaud-hub) · [LinkedIn](https://www.linkedin.com/company/zepra-tech-official))

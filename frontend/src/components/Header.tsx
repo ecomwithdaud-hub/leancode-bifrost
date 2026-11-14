@@ -1,18 +1,20 @@
 "use client";
 
 import React from "react";
-import { Shield, ShieldAlert, Cpu } from "lucide-react";
+import { Shield, ShieldAlert, Cpu, Users } from "lucide-react";
 
 interface HeaderProps {
   status: any;
   telemetry: any;
   onToggleConfidential: () => void;
+  onOpenTeam?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   status,
   telemetry,
   onToggleConfidential,
+  onOpenTeam,
 }) => {
   const isConfidential = status?.confidential_locked || telemetry?.confidential_locked;
   const activeModel =
@@ -61,6 +63,16 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Right side: Active model, Failover, Confidential toggle, Bifrost Online pill */}
         <div className="flex flex-wrap items-center gap-2.5">
+          {/* View Team Trigger Button */}
+          <button
+            type="button"
+            onClick={onOpenTeam}
+            className="flex items-center gap-1.5 bg-[#141821] hover:bg-white/[0.06] border border-white/10 hover:border-[#a3e635]/50 text-xs text-slate-200 rounded-lg px-3 py-1.5 transition-colors cursor-pointer font-medium"
+          >
+            <Users className="w-3.5 h-3.5 text-[#a3e635]" />
+            <span>Team · Zepra Tech</span>
+          </button>
+
           {/* Active Model Indicator */}
           <div className="flex items-center gap-1.5 bg-[#0f1218] border border-white/[0.08] rounded-md px-2.5 py-1 text-xs">
             <Cpu className="w-3.5 h-3.5 text-slate-400" />

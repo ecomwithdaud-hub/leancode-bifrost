@@ -7,6 +7,7 @@ import { MetricsCards } from "@/components/MetricsCards";
 import { BudgetBar } from "@/components/BudgetBar";
 import { PendingActions } from "@/components/PendingActions";
 import { TaskConsole } from "@/components/TaskConsole";
+import { TeamModal } from "@/components/TeamModal";
 
 const API_BASE = "http://localhost:8000";
 
@@ -29,6 +30,7 @@ export default function Dashboard() {
   const [phraseIndex, setPhraseIndex] = useState<number>(0);
   const [phraseFading, setPhraseFading] = useState<boolean>(false);
   const [pipelineTrigger, setPipelineTrigger] = useState<number>(0);
+  const [isTeamModalOpen, setIsTeamModalOpen] = useState<boolean>(false);
 
   const fetchData = async () => {
     try {
@@ -170,6 +172,13 @@ export default function Dashboard() {
         status={status}
         telemetry={telemetryData}
         onToggleConfidential={handleToggleConfidential}
+        onOpenTeam={() => setIsTeamModalOpen(true)}
+      />
+
+      {/* Team Zepra Tech Modal */}
+      <TeamModal
+        isOpen={isTeamModalOpen}
+        onClose={() => setIsTeamModalOpen(false)}
       />
 
       {/* Main Content Area */}
@@ -289,7 +298,18 @@ export default function Dashboard() {
       {/* Minimal Footer */}
       <footer className="border-t border-white/[0.06] bg-[#090b10] py-3.5 px-6 text-center text-xs text-slate-500">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span className="font-mono text-[11px]">LeanCode · Global AI Hackathon 2026</span>
+          <span className="font-mono text-[11px]">
+            Built by{" "}
+            <a
+              href="https://gozepra.tech/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 hover:text-[#a3e635] underline decoration-white/20 hover:decoration-[#a3e635] transition-colors"
+            >
+              Team Zepra Tech
+            </a>{" "}
+            · Global AI Hackathon 2026
+          </span>
           <span className="text-[11px]">
             Bifrost Gateway: <code className="text-slate-400 font-mono">http://localhost:8080/openai/v1</code>
           </span>
