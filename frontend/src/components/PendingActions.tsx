@@ -40,7 +40,7 @@ export const PendingActions: React.FC<PendingActionsProps> = ({
   const hasPending = actions && actions.length > 0;
 
   return (
-    <div className="rounded-xl border border-white/[0.08] bg-[#0f1218] p-5 space-y-4">
+    <div className="rounded-xl border border-white/[0.08] hover:border-white/15 bg-[#0f1218] p-5 space-y-4 transition-colors">
       <div className="flex items-center justify-between border-b border-white/[0.06] pb-3">
         <div className="flex items-center gap-2">
           <ShieldCheck className="w-4 h-4 text-slate-400" />

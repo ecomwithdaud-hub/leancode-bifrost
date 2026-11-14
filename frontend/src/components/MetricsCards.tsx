@@ -22,7 +22,7 @@ export const MetricsCards: React.FC<MetricsCardsProps> = ({ telemetry, budgetCap
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
       {/* 1. Tokens Saved by Cache */}
-      <div className="rounded-xl border border-white/[0.08] bg-[#0f1218] p-4 flex flex-col justify-between">
+      <div className="rounded-xl border border-white/[0.08] hover:border-white/15 bg-[#0f1218] p-4 flex flex-col justify-between transition-colors">
         <span className="text-[11px] font-mono font-medium text-slate-400 uppercase tracking-wider">
           Tokens Saved (Cache)
         </span>
@@ -31,7 +31,7 @@ export const MetricsCards: React.FC<MetricsCardsProps> = ({ telemetry, budgetCap
             +{savedTokens.toLocaleString()}
           </span>
         </div>
-        <div className="text-xs text-slate-500 font-mono flex items-center gap-1.5">
+        <div className="text-xs text-slate-500 font-mono flex items-center gap-1.5 tabular-nums">
           <span className="text-slate-300 font-semibold">{cacheHits}</span>
           <span>cache hits</span>
           <span>·</span>
@@ -40,7 +40,7 @@ export const MetricsCards: React.FC<MetricsCardsProps> = ({ telemetry, budgetCap
       </div>
 
       {/* 2. Tokens Consumed */}
-      <div className="rounded-xl border border-white/[0.08] bg-[#0f1218] p-4 flex flex-col justify-between">
+      <div className="rounded-xl border border-white/[0.08] hover:border-white/15 bg-[#0f1218] p-4 flex flex-col justify-between transition-colors">
         <span className="text-[11px] font-mono font-medium text-slate-400 uppercase tracking-wider">
           Tokens Consumed
         </span>
@@ -49,7 +49,7 @@ export const MetricsCards: React.FC<MetricsCardsProps> = ({ telemetry, budgetCap
             {totalTokens.toLocaleString()}
           </span>
         </div>
-        <div className="text-xs text-slate-500 font-mono flex items-center gap-1.5">
+        <div className="text-xs text-slate-500 font-mono flex items-center gap-1.5 tabular-nums">
           <span>Prompt: <span className="text-slate-300">{promptTokens.toLocaleString()}</span></span>
           <span>·</span>
           <span>Compl: <span className="text-slate-300">{compTokens.toLocaleString()}</span></span>
@@ -57,7 +57,7 @@ export const MetricsCards: React.FC<MetricsCardsProps> = ({ telemetry, budgetCap
       </div>
 
       {/* 3. Spend vs Cap */}
-      <div className="rounded-xl border border-white/[0.08] bg-[#0f1218] p-4 flex flex-col justify-between">
+      <div className="rounded-xl border border-white/[0.08] hover:border-white/15 bg-[#0f1218] p-4 flex flex-col justify-between transition-colors">
         <span className="text-[11px] font-mono font-medium text-slate-400 uppercase tracking-wider">
           Cumulative Spend
         </span>
@@ -66,14 +66,14 @@ export const MetricsCards: React.FC<MetricsCardsProps> = ({ telemetry, budgetCap
             ${totalSpend.toFixed(5)}
           </span>
         </div>
-        <div className="text-xs text-slate-500 font-mono flex items-center justify-between">
+        <div className="text-xs text-slate-500 font-mono flex items-center justify-between tabular-nums">
           <span>Budget cap:</span>
           <span className="text-slate-300 font-medium">${budgetCap.toFixed(2)} USD</span>
         </div>
       </div>
 
       {/* 4. Token Reduction Efficiency */}
-      <div className="rounded-xl border border-white/[0.08] bg-[#0f1218] p-4 flex flex-col justify-between">
+      <div className="rounded-xl border border-white/[0.08] hover:border-white/15 bg-[#0f1218] p-4 flex flex-col justify-between transition-colors">
         <span className="text-[11px] font-mono font-medium text-slate-400 uppercase tracking-wider">
           Token Cost Efficiency
         </span>

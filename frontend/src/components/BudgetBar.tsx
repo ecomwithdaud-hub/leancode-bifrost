@@ -22,7 +22,7 @@ export const BudgetBar: React.FC<BudgetBarProps> = ({ totalSpend, budgetCap, sta
   }
 
   return (
-    <div className="rounded-xl border border-white/[0.08] bg-[#0f1218] p-4">
+    <div className="rounded-xl border border-white/[0.08] hover:border-white/15 bg-[#0f1218] p-4 transition-colors">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-2.5">
         <div className="flex items-center gap-2">
           {isHalted ? (
