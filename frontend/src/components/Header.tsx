@@ -27,9 +27,28 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         {/* Brand: Left compact L square badge + LeanCode (AI coding agent · control room) */}
         <div className="flex items-center gap-3">
-          <div className="w-7 h-7 rounded-md bg-[#a3e635] text-[#090b10] font-mono font-bold flex items-center justify-center text-sm tracking-tight select-none">
-            L
-          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            width="28"
+            height="28"
+            className="shrink-0"
+            fill="none"
+          >
+            <rect
+              x="1"
+              y="1"
+              width="30"
+              height="30"
+              rx="7"
+              fill="#0f1218"
+              stroke="rgba(163, 230, 53, 0.35)"
+              strokeWidth="1"
+            />
+            <path d="M8 8h3.5v12.5H18V24H8V8z" fill="#a3e635" />
+            <rect x="14.5" y="8" width="9.5" height="3.5" fill="#a3e635" />
+            <rect x="14.5" y="14.25" width="6.5" height="3.5" fill="#f1f5f9" />
+          </svg>
           <div className="flex items-baseline gap-2">
             <span className="text-sm font-semibold text-slate-100 tracking-tight">
               LeanCode

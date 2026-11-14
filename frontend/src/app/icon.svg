@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none">
+  <!-- Background -->
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="#0f1218" stroke="rgba(163, 230, 53, 0.35)" stroke-width="1" />
+  
+  <!-- Geometric "L" bracket with sharp mitered corners -->
+  <path d="M8 8h3.5v12.5H18V24H8V8z" fill="#a3e635" />
+  
+  <!-- Staggered horizontal token-slice bars -->
+  <rect x="14.5" y="8" width="9.5" height="3.5" fill="#a3e635" />
+  <rect x="14.5" y="14.25" width="6.5" height="3.5" fill="#f1f5f9" />
+</svg>
