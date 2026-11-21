@@ -9,29 +9,38 @@ export interface TeamMember {
   initials: string;
   github: string;
   linkedin: string;
+  tag?: string;
 }
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Muhammad Daud Ali Lashari",
-    role: "Founder & CEO · Lead AI Architect",
+    role: "Lead AI Architect, LeanCode",
     initials: "DL",
     github: "https://github.com/ecomwithdaud-hub",
-    linkedin: "https://www.linkedin.com/company/zepra-tech-official",
+    linkedin: "https://www.linkedin.com/in/muhammad-daud-ali-lashari-1302a5337/",
+    tag: "Team Lead",
   },
   {
-    name: "Team Member 02",
-    role: "Full-Stack & Systems Engineer",
-    initials: "T2",
-    github: "https://github.com/ecomwithdaud-hub",
-    linkedin: "https://www.linkedin.com/company/zepra-tech-official",
+    name: "M. Abdul Rafay",
+    role: "Full-Stack & Systems Engineer, LeanCode",
+    initials: "AR",
+    github: "https://github.com/marafay-web",
+    linkedin: "https://www.linkedin.com/in/m-abdul-rafay-0a4156353",
   },
   {
-    name: "Team Member 03",
-    role: "AI Routing & QA Specialist",
-    initials: "T3",
-    github: "https://github.com/ecomwithdaud-hub",
-    linkedin: "https://www.linkedin.com/company/zepra-tech-official",
+    name: "Noor Ul Saba",
+    role: "AI Routing & QA Specialist, LeanCode",
+    initials: "NS",
+    github: "https://github.com/noorsaba1215",
+    linkedin: "https://www.linkedin.com/in/noor-ul-saba-3b2b27385",
+  },
+  {
+    name: "Muhammad Awais Raza",
+    role: "Backend & Gateway Integration Engineer, LeanCode",
+    initials: "MR",
+    github: "https://github.com/mawaisawan2008",
+    linkedin: "https://pk.linkedin.com/in/muhammad-awais-raza-88b51544b",
   },
 ];
 
@@ -67,7 +76,7 @@ export const TeamModal: React.FC<TeamModalProps> = ({ isOpen, onClose }) => {
       }}
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200"
     >
-      <div className="relative w-full max-w-3xl rounded-xl border border-white/10 bg-[#0f1218] p-6 shadow-2xl transition-all duration-200 ease-out transform scale-100 space-y-6">
+      <div className="relative w-full max-w-4xl rounded-xl border border-white/10 bg-[#0f1218] p-6 shadow-2xl transition-all duration-200 ease-out transform scale-100 space-y-6 max-h-[92vh] overflow-y-auto">
         {/* Top-Right Close Button */}
         <button
           type="button"
@@ -88,11 +97,11 @@ export const TeamModal: React.FC<TeamModalProps> = ({ isOpen, onClose }) => {
           </div>
 
           <h3 className="text-xl sm:text-2xl font-bold text-slate-100 tracking-tight">
-            Built by Zepra Tech
+            Built by Team Zepra Tech
           </h3>
 
-          <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-xl">
-            Engineering high-efficiency agentic workflows, Maxim AI Bifrost routing pipelines, and token-minimized code generation for the Global AI Hackathon.
+          <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-2xl">
+            Engineering high-efficiency agentic workflows, Maxim AI Bifrost routing pipelines, and token-minimized code generation for the Global AI Hackathon 2026.
           </p>
 
           {/* Clickable Header Link Pills */}
@@ -121,17 +130,24 @@ export const TeamModal: React.FC<TeamModalProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
 
-        {/* Modal Body: Responsive Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1">
+        {/* Modal Body: Responsive Card Grid (4 Members) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-1">
           {TEAM_MEMBERS.map((member, idx) => (
             <div
               key={idx}
               className="rounded-lg border border-white/10 bg-[#141821] hover:border-[#a3e635]/40 transition-colors p-4 flex flex-col justify-between space-y-4"
             >
               <div className="space-y-3">
-                {/* Monogram Avatar Badge */}
-                <div className="w-10 h-10 rounded-lg bg-[#a3e635]/10 border border-[#a3e635]/30 text-[#a3e635] font-mono font-bold flex items-center justify-center text-sm select-none">
-                  {member.initials}
+                {/* Monogram Avatar Badge + Optional Tag */}
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-lg bg-[#a3e635]/10 border border-[#a3e635]/30 text-[#a3e635] font-mono font-bold flex items-center justify-center text-sm select-none">
+                    {member.initials}
+                  </div>
+                  {member.tag && (
+                    <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-[#a3e635]/10 border border-[#a3e635]/30 text-[#a3e635]">
+                      {member.tag}
+                    </span>
+                  )}
                 </div>
 
                 <div>
@@ -171,7 +187,7 @@ export const TeamModal: React.FC<TeamModalProps> = ({ isOpen, onClose }) => {
 
         {/* Modal Footer Note */}
         <div className="flex items-center justify-between text-[11px] font-mono text-slate-500 pt-2 border-t border-white/[0.06]">
-          <span>Zepra Tech · AI Systems & Gateway Architecture</span>
+          <span>Team Zepra Tech · LeanCode Architecture</span>
           <span>Global AI Hackathon 2026</span>
         </div>
       </div>

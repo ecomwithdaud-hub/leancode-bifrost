@@ -248,8 +248,11 @@ leancode-bifrost/
 
 ---
 
-## 👥 Team
+## 👥 Team Zepra Tech
 
-- **Muhammad Daud Ali Lashari** — Founder & Lead AI Architect, [Zepra Tech](https://gozepra.tech/) ([GitHub](https://github.com/ecomwithdaud-hub) · [LinkedIn](https://www.linkedin.com/company/zepra-tech-official))
-- **Team Member 02** — Full-Stack & Systems Engineer, [Zepra Tech](https://gozepra.tech/) ([GitHub](https://github.com/ecomwithdaud-hub) · [LinkedIn](https://www.linkedin.com/company/zepra-tech-official))
-- **Team Member 03** — AI Routing & QA Specialist, [Zepra Tech](https://gozepra.tech/) ([GitHub](https://github.com/ecomwithdaud-hub) · [LinkedIn](https://www.linkedin.com/company/zepra-tech-official))
+Built by **Team [Zepra Tech](https://gozepra.tech/)** for the Global AI Hackathon 2026:
+
+- **Muhammad Daud Ali Lashari** (Team Lead) — Lead AI Architect, LeanCode ([GitHub](https://github.com/ecomwithdaud-hub) · [LinkedIn](https://www.linkedin.com/in/muhammad-daud-ali-lashari-1302a5337/))
+- **M. Abdul Rafay** — Full-Stack & Systems Engineer, LeanCode ([GitHub](https://github.com/marafay-web) · [LinkedIn](https://www.linkedin.com/in/m-abdul-rafay-0a4156353))
+- **Noor Ul Saba** — AI Routing & QA Specialist, LeanCode ([GitHub](https://github.com/noorsaba1215) · [LinkedIn](https://www.linkedin.com/in/noor-ul-saba-3b2b27385))
+- **Muhammad Awais Raza** — Backend & Gateway Integration Engineer, LeanCode ([GitHub](https://github.com/mawaisawan2008) · [LinkedIn](https://pk.linkedin.com/in/muhammad-awais-raza-88b51544b))
